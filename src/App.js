@@ -3,17 +3,14 @@ import { hot } from "react-hot-loader";
 import Message from "./Components/Message/Message.js";
 import "normalize.css";
 import "./App.css";
-import armyKnife from "./swiss-army-knife.svg";
+import Navigation from "./Components/Navigation/Navigation.js"
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="main-header">
-          <div className="main-header__svg-container">
-            <img className="main-header__img" src={armyKnife} />
-          </div>
-          <h1 className="main-header__title"> Hello, World! </h1>
+         <Navigation />
         </header>
         <section className="container">
           <Message message="Welcome to the react-starter. Start hacking away!" />
