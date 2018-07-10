@@ -2591,7 +2591,7 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul:not(.browser-default) {
