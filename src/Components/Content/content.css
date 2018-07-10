@@ -5,16 +5,29 @@
     
 }
 
-.header p {
+
+.header {
     line-height: 1.1;
     font-weight: bold;
     text-align: center;
     width: 60%; /* 70% of the parent*/
     margin:10px auto;
-    font-size: 64px;
+}
+
+.header h1 {
+    font-size: 5em;
+}
+
+p {
+    font-family: Bitter;
+    color: rgba(33,33,33,1);
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+
 }
 
 .break {
-    margin: -50px 200px 0 200px;
+    margin: -50px 200px 50px 200px;
     border-bottom:12px solid rgba(0,95,255,1);
 }
