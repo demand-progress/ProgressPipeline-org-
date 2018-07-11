@@ -75,7 +75,15 @@ ul li:last-child {
     font-size: 17px;
 }
 
-a {
+.page-content a {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.page-content a:hover {
+    color: rgba(0,95,255,1);
+    text-decoration: underline;
     cursor: pointer;
 }
 
