@@ -38,6 +38,20 @@ class Content extends Component {
                     </p>
 
                 </div>
+                <div className="links">
+                    <p>
+                        <a><strong>About the Program</strong></a>
+                    </p>
+                    <p>
+                        <a><strong>Why Work on Capitol Hill</strong></a>
+                    </p>
+                    <p>
+                        <a><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
+                    </p>
+                    <p>
+                        <a><strong>Apply</strong></a>
+                    </p>
+                </div>
             </div>
           );
     }
