@@ -112,7 +112,9 @@ class Content extends Component {
                             <Header headerText={ homeHeader }/>
                         </div>
                         <div className="break"></div>
-                        <Page navigatePage={this.navigatePage} text={homeContent}/>
+                        <div className="page-content">
+                            <Page navigatePage={this.navigatePage} text={homeContent}/>
+                        </div>
                         {links}
                     </div>
                     )
@@ -123,7 +125,9 @@ class Content extends Component {
                     <div>
                         <Header headerText={ aboutHeader }/>
                     </div>
-                    <Page navigatePage={this.navigatePage} text={aboutContent}/>
+                    <div className="page-content">
+                        <Page navigatePage={this.navigatePage} text={aboutContent}/>
+                    </div>
                 </div>
                 )
             break;
@@ -133,7 +137,9 @@ class Content extends Component {
                     <div>
                         <Header headerText={ whyHeader }/>
                     </div>
-                    <Page navigatePage={this.navigatePage} text={whyContent}/>
+                    <div className="page-content">
+                        <Page navigatePage={this.navigatePage} text={whyContent}/>
+                    </div>
                 </div>
                 )
             break;
@@ -143,7 +149,9 @@ class Content extends Component {
                     <div>
                         <Header headerText={ pipelineHeader }/>
                     </div>
-                    <Page navigatePage={this.navigatePage} text={pipelineContent}/>
+                    <div className="page-content">
+                        <Page navigatePage={this.navigatePage} text={pipelineContent}/>
+                    </div>
                 </div>
                 )
             break;
@@ -153,7 +161,9 @@ class Content extends Component {
                     <div>
                         <Header headerText={ whoHeader }/>
                     </div>
-                    <Page navigatePage={this.navigatePage} text={whoContent}/>
+                    <div className="page-content">
+                        <Page navigatePage={this.navigatePage} text={whoContent}/>
+                    </div>
                 </div>
                 )
             break;
@@ -163,7 +173,9 @@ class Content extends Component {
                          <div>
                             <Header headerText={ applyHeader }/>
                         </div>
-                        <Page navigatePage={this.navigatePage} text={applyContent}/>
+                        <div className="page-content">
+                            <Page navigatePage={this.navigatePage} text={applyContent}/>
+                        </div>
                         <div>
                             <p>
                                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFliu2CAVouMrOf0fTuzlJSnwyG5jfU7ceBdLguWabFDdXdQ/viewform?oldembedui=true">Open link to Apply</a>
@@ -179,7 +191,9 @@ class Content extends Component {
                             <Header headerText={ homeHeader }/>
                         </div>
                         <div className="break"></div>
-                        <Page navigatePage={this.navigatePage} text={homeContent}/>
+                        <div className="page-content">
+                            <Page navigatePage={this.navigatePage} text={homeContent}/>
+                        </div>
                         {links}
                     </div>
                     )
