@@ -1,6 +1,5 @@
 import React from "react"
 import PropTypes from "prop-types"
-import "./content.css"
 
 const Header = (props) => {
   return (
@@ -8,7 +7,6 @@ const Header = (props) => {
         <div className="header">
         <h1> {props.headerText} </h1>
         </div>
-       <div className="break"></div>
       </div>
   )
 }
