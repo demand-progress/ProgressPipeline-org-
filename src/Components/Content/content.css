@@ -71,7 +71,7 @@ p {
     padding-bottom: 60px;
 }
 
-ul li:last-child {
+.page-content ul li:last-child {
     font-size: 17px;
 }
 
