@@ -11,8 +11,9 @@ class Navigation extends Component  {
 
     render() {
         return (
-            <div>
-                <Navbar collapseOnSelect>
+
+            <div id="navHeader">
+                <Navbar fixedTop collapseOnSelect>
                     <Navbar.Header>
                         <Navbar.Brand>
                         <a href="#brand">Progressive Talent Pipeline</a>
