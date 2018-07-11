@@ -71,8 +71,16 @@ p {
     padding-bottom: 60px;
 }
 
+ul li:last-child {
+    font-size: 17px;
+}
+
 a {
     cursor: pointer;
+}
+
+.page-content{
+    margin-bottom: 60px;
 }
 
 /* ----------- Non-Retina Screens ----------- */
