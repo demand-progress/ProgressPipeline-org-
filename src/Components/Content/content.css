@@ -34,6 +34,14 @@ header.main-header {
     color: black;
 }
 
+h2 {
+    text-align: center; 
+}
+
+ol li {
+     font-size: 18px;
+}
+
 p {
     color: black;
     font-size: 18px;
