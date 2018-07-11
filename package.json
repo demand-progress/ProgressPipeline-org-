@@ -39,6 +39,7 @@
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.1",
     "react-hot-loader": "^4.3.3",
+    "react-markdown": "^3.3.4",
     "webpack": "^4.12.0"
   }
 }
