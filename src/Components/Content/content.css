@@ -1,8 +1,20 @@
-.main-header {
-    width: 100% !important;
-    border: 10px solid green;  
+/* .main-header {
+    position: fixed; 
+} */
+
+
+nav .container {
+    background-color: white;
+
+} 
+
+header.main-header {
+    margin-bottom: 90px;
 }
 
+/* .navbar-default{
+    background-color: green!important;
+} */
 .header {
     width:100%;
     height:200px;
@@ -28,6 +40,31 @@ p {
     line-height: 1.6;
     font-weight: 500;
 
+}
+
+.links{
+    text-align: center
+}
+
+.links p a{
+    font-size: 16px;
+    font-family: Bitter;
+    color: rgba(33,33,33,1);
+    font-size: 22px;
+    line-height: 1.6;
+    text-decoration: underline;
+}
+
+.links p {
+    padding:25px;
+}
+
+.links p:last-child {
+    padding-bottom: 60px;
+}
+
+a {
+    cursor: pointer;
 }
 
 /* ----------- Non-Retina Screens ----------- */
