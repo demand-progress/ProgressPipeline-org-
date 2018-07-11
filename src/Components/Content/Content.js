@@ -1,9 +1,8 @@
 import React, { Component } from "react"
-import Headers from "./Headers.js"
+import Header from "./Header.js"
 import Navigation from "../Navigation/Navigation.js"
 import "./content.css"
-import Home from "./Home.js"
-import Apply from "./Apply.js"
+import Page from "./Page.js"
 import keys from '../../config/keys.js'
 import axios from 'axios'
 
@@ -11,7 +10,14 @@ class Content extends Component {
     constructor(props){
         super(props)
         this.state = {
-            location: ''
+            location: '',
+            loading: true,
+            textContent: {
+                homeHeader: null,
+                homeContent: null,
+                applyHeader: null,
+                applyContent: null
+            }
         }
         this.navigatePage = this.navigatePage.bind(this)
     }
@@ -25,7 +31,7 @@ class Content extends Component {
 
         axios({
             method: "get",
-            url: 'https://api.tipe.io/api/v1/document/5af33e3968f0a10013429fdc',
+            url: 'https://api.tipe.io/api/v1/document/5b4630ca1045420013ea11f3',
             headers: {
               'Content-Type': 'application/json',
               'Authorization': tipeAuth,
@@ -35,20 +41,15 @@ class Content extends Component {
           .then(response => {
             const { data } = response
             console.log(data)
-            // this.setState({
-            //   textContent:{
-            //     header: data.blocks[0].value,
-            //     subHeader: data.blocks[1].value,
-            //     congressLanguage: data.blocks[2].value,
-            //     main: data.blocks[3].value,
-            //     disclaimer: data.blocks[4].value,
-            //     formButton: data.blocks[5].value,
-            //     modalHeader: data.blocks[6].value,
-            //     modalText: data.blocks[7].value,
-            //     tweet: data.blocks[8].value
-            //   },
-            //   loading: false
-            // })
+              this.setState({
+              textContent:{
+                homeHeader: data.blocks[0].value,
+                homeContent: data.blocks[1].value,
+                applyHeader: data.blocks[2].value,
+                applyContent: data.blocks[3].value
+              },
+              loading: false
+            })
           })
           .catch(console.error);
     }
@@ -62,33 +63,76 @@ class Content extends Component {
     }
 
     render(){
+        const { homeHeader, homeContent, applyHeader, applyContent } = this.state.textContent
+
         let display = null
+
+        const links = (
+            <div className="links">
+                <p>
+                    <a href="#about" onClick={ this.navigatePage }><strong>About the Program</strong></a>
+                </p>
+                <p>
+                    <a href="#capitol" onClick={ this.navigatePage }><strong>Why Work on Capitol Hill</strong></a>
+                </p>
+                <p>
+                    <a href="#pipeline" onClick={ this.navigatePage }><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
+                </p>
+                <p>
+                    <a href="#who" onClick={ this.navigatePage }><strong>Who We Are Looking For</strong></a>
+                </p>
+                <p>
+                    <a href="#apply" onClick={ this.navigatePage }><strong>Apply</strong></a>
+                </p>
+            </div>
+        )
+
         switch(this.state.location) {
             case '#home':
                 display = (
-                    <Home navigatePage={this.navigatePage}/>
+                    <div>
+                        <div>
+                            <Header headerText={ homeHeader }/>
+                        </div>
+                        <div className="break"></div>
+                        <Page navigatePage={this.navigatePage} text={homeContent}/>
+                        {links}
+                    </div>
                     )
                 break;
             case '#apply':
                 display = (
-                    <Apply />
+                    <div>
+                         <div>
+                            <Header headerText={ applyHeader }/>
+                        </div>
+                        <Page navigatePage={this.navigatePage} text={applyContent}/>
+                        <div>
+                            <p>
+                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFliu2CAVouMrOf0fTuzlJSnwyG5jfU7ceBdLguWabFDdXdQ/viewform?oldembedui=true">Open link to Apply</a>
+                            </p>
+                        </div>
+                    </div>
                 )
                 break;
             default:
                 display = (
-                    <Home navigatePage={this.navigatePage}/>
+                    <div>
+                        <div>
+                            <Header headerText={ homeHeader }/>
+                        </div>
+                        <div className="break"></div>
+                        <Page navigatePage={this.navigatePage} text={homeContent}/>
+                        {links}
+                    </div>
                     )
         }
 
         return (
-            <div>
-                 <header className="main-header">
-                <Navigation navigatePage={this.navigatePage}/>
+            <div style={{display: this.state.loading ? 'none': 'block'}}>
+                <header className="main-header">
+                    <Navigation navigatePage={this.navigatePage}/>
                 </header>
-                <div>
-                    <Headers headerText="Progressive Talent Pipeline"/>
-                </div>
-                <div className="break"></div>
                 {display}
             </div>
           );
