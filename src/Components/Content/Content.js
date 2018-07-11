@@ -16,13 +16,22 @@ class Content extends Component {
                 homeHeader: null,
                 homeContent: null,
                 applyHeader: null,
-                applyContent: null
+                applyContent: null,
+                aboutHeader: null,
+                aboutContent: null,
+                whyHeader: null,
+                whyContent: null, 
+                pipelineHeader: null,
+                pipelineContent: null,
+                whoHeader: null,
+                whoContent: null
             }
         }
         this.navigatePage = this.navigatePage.bind(this)
     }
 
     componentDidMount(){
+        window.scrollTo(0, 0);
         const { tipeAuth, tipeId } = keys;
 
         this.setState({
@@ -46,7 +55,15 @@ class Content extends Component {
                 homeHeader: data.blocks[0].value,
                 homeContent: data.blocks[1].value,
                 applyHeader: data.blocks[2].value,
-                applyContent: data.blocks[3].value
+                applyContent: data.blocks[3].value,
+                aboutHeader: data.blocks[4].value,
+                aboutContent: data.blocks[5].value, 
+                whyHeader: data.blocks[6].value,
+                whyContent: data.blocks[7].value,
+                pipelineHeader: data.blocks[8].value,
+                pipelineContent: data.blocks[9].value,
+                whoHeader: data.blocks[10].value,
+                whoContent: data.blocks[11].value
               },
               loading: false
             })
@@ -63,7 +80,8 @@ class Content extends Component {
     }
 
     render(){
-        const { homeHeader, homeContent, applyHeader, applyContent } = this.state.textContent
+        const { homeHeader, homeContent, applyHeader, applyContent, aboutHeader, aboutContent,
+            whyHeader, whyContent, pipelineHeader, pipelineContent, whoHeader, whoContent} = this.state.textContent
 
         let display = null
 
@@ -100,6 +118,46 @@ class Content extends Component {
                     </div>
                     )
                 break;
+            case '#about':
+            display = (
+                <div>
+                    <div>
+                        <Header headerText={ aboutHeader }/>
+                    </div>
+                    <Page navigatePage={this.navigatePage} text={aboutContent}/>
+                </div>
+                )
+            break;
+            case '#capitol':
+            display = (
+                <div>
+                    <div>
+                        <Header headerText={ whyHeader }/>
+                    </div>
+                    <Page navigatePage={this.navigatePage} text={whyContent}/>
+                </div>
+                )
+            break;
+            case '#pipeline':
+            display = (
+                <div>
+                    <div>
+                        <Header headerText={ pipelineHeader }/>
+                    </div>
+                    <Page navigatePage={this.navigatePage} text={pipelineContent}/>
+                </div>
+                )
+            break;
+            case '#who':
+            display = (
+                <div>
+                    <div>
+                        <Header headerText={ whoHeader }/>
+                    </div>
+                    <Page navigatePage={this.navigatePage} text={whoContent}/>
+                </div>
+                )
+            break;
             case '#apply':
                 display = (
                     <div>
