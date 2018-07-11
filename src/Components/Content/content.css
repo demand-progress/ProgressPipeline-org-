@@ -17,7 +17,7 @@ header.main-header {
 } */
 .header {
     width:100%;
-    height:200px;
+    height: 180px;
 }
 
 
@@ -71,8 +71,24 @@ p {
     padding-bottom: 60px;
 }
 
-a {
+.page-content ul li:last-child {
+    font-size: 17px;
+}
+
+.page-content a {
+    color: black;
+    text-decoration: underline;
     cursor: pointer;
+}
+
+.page-content a:hover {
+    color: rgba(0,95,255,1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.page-content{
+    margin-bottom: 60px;
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -81,7 +97,7 @@ a {
   and (max-device-width: 1600px) 
   and (-webkit-min-device-pixel-ratio: 1) { 
     .break {
-        margin: -50px 200px 50px 200px;
+        margin: -10px 200px 50px 200px;
         border-bottom:12px solid rgba(0,95,255,1);
     }
 }

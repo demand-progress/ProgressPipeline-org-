@@ -18,8 +18,8 @@ class Navigation extends Component  {
             <div id="navHeader">
                 <Navbar fixedTop collapseOnSelect >
                     <Navbar.Header>
-                        <Navbar.Brand>
-                        <a href="#brand">Progressive Talent Pipeline</a>
+                        <Navbar.Brand >
+                        <a href="#home" onClick={ navigatePage }>Progressive Talent Pipeline</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
