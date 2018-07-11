@@ -2,22 +2,13 @@ import React, { Component } from "react"
 import Markdown from 'react-markdown'
 
 
-class Page extends Component {
-    constructor(props){
-        super(props)
-    }
+const Page = (props) =>  {
    
-    render(){
-        const { navigatePage, text } = this.props
     return ( 
         <div>
-            <Markdown source= {text} />
-        <div>
-
+            <Markdown source= {props.text} />
         </div>
-    </div>
-        );
-    };
+    );
   };
 
 export default Page;
