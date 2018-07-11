@@ -3,6 +3,7 @@ import Header from "./Header.js"
 import Navigation from "../Navigation/Navigation.js"
 import "./content.css"
 import Page from "./Page.js"
+import Form from "./Form.js"
 import keys from '../../config/keys.js'
 import axios from 'axios'
 
@@ -175,6 +176,7 @@ class Content extends Component {
                         </div>
                         <div className="page-content">
                             <Page navigatePage={this.navigatePage} text={applyContent}/>
+                            <Form/>
                         </div>
                         <div>
                             <p>
