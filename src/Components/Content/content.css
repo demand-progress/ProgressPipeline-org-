@@ -129,7 +129,6 @@ p {
     box-shadow: inset 0 1px 0 white, 0 1px 5px white;
 }
 
-
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
   and (min-device-width: 1200px) 
@@ -151,7 +150,7 @@ p {
         }
 
         .break {
-            margin: 0 100px 40px 100px; 
+            margin: 0px 50px 40px 50px; 
         }
     }
     
