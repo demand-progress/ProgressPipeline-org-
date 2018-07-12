@@ -175,13 +175,13 @@ class Content extends Component {
                             <Header headerText={ applyHeader }/>
                         </div>
                         <div className="page-content">
-                            <Page navigatePage={this.navigatePage} text={applyContent}/>
+                            <Page navigatePage={this.navigatePage} text=''/>
                             <Form/>
                         </div>
                         <div>
-                            <p>
+                            {/* <p>
                                 <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFliu2CAVouMrOf0fTuzlJSnwyG5jfU7ceBdLguWabFDdXdQ/viewform?oldembedui=true">Open link to Apply</a>
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 )
