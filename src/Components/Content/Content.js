@@ -113,7 +113,7 @@ class Content extends Component {
                             <Header headerText={ homeHeader }/>
                         </div>
                         <div className="break"></div>
-                        <div className="page-content">
+                        <div className="page-content home">
                             <Page navigatePage={this.navigatePage} text={homeContent}/>
                         </div>
                         {links}
@@ -171,17 +171,12 @@ class Content extends Component {
             case '#apply':
                 display = (
                     <div>
-                         <div>
+                         <div className="apply-header">
                             <Header headerText={ applyHeader }/>
                         </div>
                         <div className="page-content">
                             <Page navigatePage={this.navigatePage} text=''/>
                             <Form/>
-                        </div>
-                        <div>
-                            {/* <p>
-                                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFliu2CAVouMrOf0fTuzlJSnwyG5jfU7ceBdLguWabFDdXdQ/viewform?oldembedui=true">Open link to Apply</a>
-                            </p> */}
                         </div>
                     </div>
                 )
