@@ -35,6 +35,10 @@ body a {
     color: #9f1719;
 }
 
+.navbar-default .navbar-nav>li>a:focus {
+    color: #9f1719;
+}
+
 .navbar-brand {
     padding: 18px 15px;
 }
@@ -46,6 +50,9 @@ body a {
     padding: 10px;
 }
 
+.apply-header .header {
+    height: 120px;
+}
 
 header.main-header {
     margin-bottom: 90px;
@@ -75,6 +82,25 @@ header.main-header {
     margin-bottom: -80px;
 }
 
+.apply-one {
+    margin-left: 50px;
+}
+
+.apply-two {
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+
+button a {
+    font-weight: bolder;
+    text-decoration: none !important;
+}
+
+button {
+ border-radius: 5px; 
+ padding: 5px;
+}
+
 h2 {
     text-align: center; 
 }
@@ -100,27 +126,25 @@ p {
 }
 
 .links p {
-    padding:25px;
+    padding: 5px;
 }
 
 .links p:last-child {
     padding-bottom: 60px;
 }
 
-.page-content ul li:last-child {
-    font-size: 17px;
+ol li {
+    font-size: 16px;
+}
+
+.page-content li {
+    font-size: 16px;
 }
 
 .page-content a {
     text-decoration: underline;
     cursor: pointer;
 }
-
-/* .page-content a:hover {
-    color: rgba(0,95,255,1);
-    text-decoration: underline;
-    cursor: pointer;
-} */
 
 .page-content{
     margin-bottom: 60px;
