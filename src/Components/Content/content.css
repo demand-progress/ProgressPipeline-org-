@@ -172,6 +172,10 @@ p {
             .home {
                 margin-bottom: 20px;
             }
+            
+            .break {
+                margin: 0px 50px 40px 50px; 
+            }
         }
 /* ----------- Retina Screens -----------
 @media screen 
