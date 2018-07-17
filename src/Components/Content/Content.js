@@ -112,7 +112,6 @@ class Content extends Component {
                         <div>
                             <Header headerText={ homeHeader }/>
                         </div>
-                        <div className="break"></div>
                         <div className="page-content home">
                             <Page navigatePage={this.navigatePage} text={homeContent}/>
                         </div>
