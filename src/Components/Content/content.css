@@ -170,9 +170,21 @@ ol li {
     /* Styles */
         .header {
             width: 80%;
-            height: 160px;
+            height: 80px;
         }
 
+        .apply-one {
+            margin-left: 0;
+        }
+        
+        .apply-two {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            padding: 0 35px;
+        }
     }
     
     @media only screen  and (max-width : 500px) {
