@@ -50,6 +50,21 @@ body a {
     padding: 10px;
 }
 
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #212121;
+    color: white;
+    text-align: center;
+}
+
+.footer a {
+    color: white; 
+    text-decoration: none !important;;
+}
+
 .apply-header .header {
     height: 120px;
 }
@@ -167,7 +182,6 @@ ol li {
 /* Desktops and laptops ----------- */
     /* Large screens ----------- */
     @media only screen  and (max-width : 1000px) {
-    /* Styles */
         .header {
             width: 80%;
             height: 80px;
@@ -186,9 +200,10 @@ ol li {
             padding: 0 35px;
         }
     }
+
+  
     
     @media only screen  and (max-width : 500px) {
-        /* Styles */
             .header h1 {
                 font-size: 3em;
                 padding-top: 20px;
@@ -207,6 +222,14 @@ ol li {
             }
             
         }
+
+  
+    @media only screen  and (max-width : 320px) {  
+            .container {
+                padding: 0 15px;
+            }
+        }
+ 
 /* ----------- Retina Screens -----------
 @media screen 
   and (min-device-width: 1200px) 
