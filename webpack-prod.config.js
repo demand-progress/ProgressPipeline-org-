@@ -28,15 +28,14 @@ module.exports = {
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: path.resolve(__dirname, "public/"),
+    path: __dirname,
     filename: "bundle.js"
   },
 
   plugins: [
-    new CleanWebpackPlugin(["dist"]),
     new HtmlWebpackPlugin({
       title: "React Starter",
-      template: path.resolve(__dirname, "public/index.html")
+      template: path.resolve(__dirname, "index.html")
     })
   ]
 };
