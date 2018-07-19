@@ -71,12 +71,19 @@ class Content extends Component {
           .catch(console.error);
     }
 
-    navigatePage(){
-        setTimeout(function() {
-                this.setState({
-                    location: window.location.hash
-                })
-            }.bind(this),5); 
+    navigatePage(selectedKey){
+        const location = {
+            '1': '#home',
+            '2': '#about',
+            '3': '#capitol',
+            '4': '#pipeline',
+            '5.1': '#who',
+            '5.2': '#apply'
+        }
+        
+        this.setState({
+            location: location[selectedKey]
+        })
     }
 
     render(){

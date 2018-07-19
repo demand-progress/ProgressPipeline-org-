@@ -35,7 +35,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "React Starter",
-      template: path.resolve(__dirname, "index.html")
+      template: path.resolve(__dirname, "./template/index.html")
     })
   ]
 };
