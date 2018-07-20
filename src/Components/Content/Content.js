@@ -95,19 +95,19 @@ class Content extends Component {
         const links = (
             <div className="links">
                 <p>
-                    <a href="#about" onClick={ this.navigatePage }><strong>About the Program</strong></a>
+                    <a href="#about" onClick={ () => this.navigatePage(2) }><strong>About the Program</strong></a>
                 </p>
                 <p>
-                    <a href="#capitol" onClick={ this.navigatePage }><strong>Why Work on Capitol Hill</strong></a>
+                    <a href="#capitol" onClick={ () => this.navigatePage(3) }><strong>Why Work on Capitol Hill</strong></a>
                 </p>
                 <p>
-                    <a href="#pipeline" onClick={ this.navigatePage }><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
+                    <a href="#pipeline" onClick={ () => this.navigatePage(4)}><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
                 </p>
                 <p>
-                    <a href="#who" onClick={ this.navigatePage }><strong>Who We Are Looking For</strong></a>
+                    <a href="#who" onClick={ () => this.navigatePage(5.1) }><strong>Who We Are Looking For</strong></a>
                 </p>
                 <p>
-                    <a href="#apply" onClick={ this.navigatePage }><strong>Apply</strong></a>
+                    <a href="#apply" onClick={ () => this.navigatePage(5.2) }><strong>Apply</strong></a>
                 </p>
             </div>
         )
