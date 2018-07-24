@@ -3,6 +3,12 @@ import React, { Component } from "react";
 class Form extends Component  {
     constructor(props){
         super(props)
+
+        this.clicked = this.clicked.bind(this)
+    }
+
+    clicked = () => {
+        console.log('here')
     }
 
     render(){
@@ -21,10 +27,10 @@ class Form extends Component  {
                             federal level, what would they be and why would you choose each of
                             them? (Up to 500 Words)</p>
                         </div>
-                        <button><a href="https://docs.google.com/forms/d/e/1FAIpQLSexEYcWb2Ria_J97skTMXF4a4w18Ue7XJIoIuWZssHmAyP1ZA/viewform" target="_blank">Fill Out Form</a></button>
+                        <a id="button" href="https://docs.google.com/forms/d/e/1FAIpQLSexEYcWb2Ria_J97skTMXF4a4w18Ue7XJIoIuWZssHmAyP1ZA/viewform" target="_blank">Fill Out Form</a>
                     </div> 
                 </div>
-                <div class="footer">
+                <div className="footer">
                     <p>For any questions please contact <a href="mailto:progressivepipelineproject@gmail.com">progressivepipelineproject@gmail.com</a></p>
                 </div>
           </div>
