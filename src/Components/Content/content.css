@@ -11,15 +11,22 @@ body a {
     color: #9f1719;
 }
 
-button a {
+#button {
+    display: block;
+    width: 160px;
+    height: 55px;
+    background: #f0f0f0;
+    padding: 15px 15px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
     font-weight: bolder;
-    text-decoration: none !important;
-    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 2px 2px #888888;
 }
 
-button {
- border-radius: 5px; 
- padding: 10px 15px;
+a:focus, a:hover {
+    color: #9f1719;
 }
 
 .navbar,
