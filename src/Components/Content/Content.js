@@ -73,12 +73,11 @@ class Content extends Component {
 
     navigatePage(selectedKey){
         const location = {
-            '1': '#home',
+            '1': '#apply',
             '2': '#about',
             '3': '#capitol',
             '4': '#pipeline',
-            '5.1': '#who',
-            '5.2': '#apply'
+            '5': '#who'
         }
         
         this.setState({
