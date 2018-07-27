@@ -115,6 +115,14 @@ header.main-header {
     /* font-size: 2em; */
 }
 
+.loading {
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 60px;
+    color: #ababc8;
+}
+
 .apply-header {
     margin-bottom: -80px;
 }

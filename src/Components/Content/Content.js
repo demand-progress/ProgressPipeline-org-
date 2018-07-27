@@ -103,10 +103,10 @@ class Content extends Component {
                     <a href="#pipeline" onClick={ () => this.navigatePage(4)}><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
                 </p>
                 <p>
-                    <a href="#who" onClick={ () => this.navigatePage(5.1) }><strong>Who We Are Looking For</strong></a>
+                    <a href="#who" onClick={ () => this.navigatePage(5) }><strong>Who We Are Looking For</strong></a>
                 </p>
                 <p>
-                    <a href="#apply" onClick={ () => this.navigatePage(5.2) }><strong>Apply</strong></a>
+                    <a href="#apply" onClick={ () => this.navigatePage(1) }><strong>Apply</strong></a>
                 </p>
             </div>
         )
