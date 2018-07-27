@@ -23,8 +23,8 @@ class Navigation extends Component  {
                         <Nav> 
                         </Nav>
                         <Nav pullRight onSelect={navigatePage}>
-                        <NavItem eventKey={1} href="#home">
-                            Home
+                        <NavItem eventKey={1} href="#apply">
+                            Apply
                         </NavItem>
                         <NavItem eventKey={2} href="#about">
                             About the Program
@@ -35,10 +35,9 @@ class Navigation extends Component  {
                         <NavItem eventKey={4} href="#pipeline">
                             Why Apply for the Pipeline?
                         </NavItem>
-                        <NavDropdown eventKey={5} title="More" id="basic-nav-dropdown">
-                            <MenuItem eventKey={5.1} href="#who">Who we are looking for</MenuItem>
-                            <MenuItem eventKey={5.2} href="#apply">Apply</MenuItem>
-                        </NavDropdown>
+                        <NavItem eventKey={5} href="#who">
+                            Who we are looking for
+                        </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>    
