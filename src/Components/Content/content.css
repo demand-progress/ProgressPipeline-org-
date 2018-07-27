@@ -1,5 +1,5 @@
 body {
-    color: #676767;
+    color: #3e3e3e;
     font-size: 12px;
     -webkit-font-smoothing: antialiased;
     vertical-align: baseline;
@@ -25,6 +25,10 @@ body a {
     box-shadow: 2px 2px #888888;
 }
 
+.about p:nth-child(n+7):nth-child(-n+12){
+    margin-left: 40px;
+}
+
 a:focus, a:hover {
     color: #9f1719;
 }
@@ -37,7 +41,7 @@ a:focus, a:hover {
 
  .navbar-default .navbar-nav>li>a {
     font-size: 14px;
-    color: #888;
+    color: #3e3e3e;
     line-height: 19.6px;
 }
 
@@ -127,6 +131,7 @@ header.main-header {
 h2 {
     text-align: center; 
 }
+
 
 ol li {
      font-size: 18px;

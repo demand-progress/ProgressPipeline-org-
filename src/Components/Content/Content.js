@@ -131,7 +131,7 @@ class Content extends Component {
                     <div>
                         <Header headerText={ aboutHeader }/>
                     </div>
-                    <div className="page-content">
+                    <div className="page-content about">
                         <Page navigatePage={this.navigatePage} text={aboutContent}/>
                     </div>
                 </div>
