@@ -13,6 +13,7 @@ class Content extends Component {
         this.state = {
             location: '',
             loading: true,
+            currentKey: null,
             textContent: {
                 homeHeader: null,
                 homeContent: null,
@@ -25,7 +26,8 @@ class Content extends Component {
                 pipelineHeader: null,
                 pipelineContent: null,
                 whoHeader: null,
-                whoContent: null
+                whoContent: null,
+                headerText: null
             }
         }
         this.navigatePage = this.navigatePage.bind(this)
@@ -35,11 +37,7 @@ class Content extends Component {
         window.scrollTo(0, 0);
         const { tipeAuth, tipeId } = keys;
 
-        this.setState({
-            location: window.location.hash
-        })
-
-        axios({
+        const getData = () => axios({
             method: "get",
             url: 'https://api.tipe.io/api/v1/document/5b4630ca1045420013ea11f3',
             headers: {
@@ -69,6 +67,10 @@ class Content extends Component {
             })
           })
           .catch(console.error);
+
+        this.setState({
+            location: window.location.hash
+        }, () =>  getData())
     }
 
     navigatePage(selectedKey){
@@ -77,36 +79,40 @@ class Content extends Component {
             '2': '#about',
             '3': '#capitol',
             '4': '#pipeline',
-            '5': '#who'
+            '5': '#who',
+            '6': '#home'
         }
         
         this.setState({
-            location: location[selectedKey]
+            location: location[selectedKey],
+            currentKey: selectedKey
         })
     }
 
     render(){
-        const { homeHeader, homeContent, applyHeader, applyContent, aboutHeader, aboutContent,
+        const { headerText, homeHeader, homeContent, applyHeader, aboutHeader, aboutContent,
             whyHeader, whyContent, pipelineHeader, pipelineContent, whoHeader, whoContent} = this.state.textContent
-
+        const {currentKey} = this.state;
         let display = null
+
+      
 
         const links = (
             <div className="links">
                 <p>
-                    <a href="#about" onClick={ () => this.navigatePage(2) }><strong>About the Program</strong></a>
+                    <a href="#about" onClick={ () => this.navigatePage(2) }><strong>{aboutHeader}</strong></a>
                 </p>
                 <p>
-                    <a href="#capitol" onClick={ () => this.navigatePage(3) }><strong>Why Work on Capitol Hill</strong></a>
+                    <a href="#capitol" onClick={ () => this.navigatePage(3) }><strong>{whyHeader}</strong></a>
                 </p>
                 <p>
                     <a href="#pipeline" onClick={ () => this.navigatePage(4)}><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
                 </p>
                 <p>
-                    <a href="#who" onClick={ () => this.navigatePage(5) }><strong>Who We Are Looking For</strong></a>
+                    <a href="#who" onClick={ () => this.navigatePage(5) }><strong>{whoHeader}</strong></a>
                 </p>
                 <p>
-                    <a href="#apply" onClick={ () => this.navigatePage(1) }><strong>Apply</strong></a>
+                    <a href="#apply" onClick={ () => this.navigatePage(1) }><strong>{applyHeader}</strong></a>
                 </p>
             </div>
         )
@@ -115,87 +121,58 @@ class Content extends Component {
             case '#home':
                 display = (
                     <div>
-                        <div>
-                            <Header headerText={ homeHeader }/>
-                        </div>
-                        <div className="page-content home">
-                            <Page navigatePage={this.navigatePage} text={homeContent}/>
-                        </div>
+                        <Header headerText={homeHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content home"}/>
                         {links}
                     </div>
                     )
                 break;
             case '#about':
-            display = (
-                <div>
+                display = (
                     <div>
-                        <Header headerText={ aboutHeader }/>
+                        <Header headerText={aboutHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={aboutContent} cName={"page-content about"}/>
                     </div>
-                    <div className="page-content about">
-                        <Page navigatePage={this.navigatePage} text={aboutContent}/>
-                    </div>
-                </div>
-                )
-            break;
+                    )
+                break;
             case '#capitol':
-            display = (
-                <div>
+                display = (
                     <div>
-                        <Header headerText={ whyHeader }/>
+                        <Header headerText={whyHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={whyContent} cName={"page-content"}/>
                     </div>
-                    <div className="page-content">
-                        <Page navigatePage={this.navigatePage} text={whyContent}/>
-                    </div>
-                </div>
-                )
-            break;
+                    )
+                break;
             case '#pipeline':
-            display = (
-                <div>
+                display = (
                     <div>
-                        <Header headerText={ pipelineHeader }/>
+                        <Header headerText={pipelineHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={pipelineContent} cName={"page-content"}/>
                     </div>
-                    <div className="page-content">
-                        <Page navigatePage={this.navigatePage} text={pipelineContent}/>
-                    </div>
-                </div>
-                )
-            break;
+                    )
+                break;
             case '#who':
-            display = (
-                <div>
+                display = (
                     <div>
-                        <Header headerText={ whoHeader }/>
+                        <Header headerText={whoHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={whoContent} cName={"page-content"}/>
                     </div>
-                    <div className="page-content">
-                        <Page navigatePage={this.navigatePage} text={whoContent}/>
-                    </div>
-                </div>
-                )
-            break;
+                    )
+                break;
             case '#apply':
                 display = (
                     <div>
-                         <div className="apply-header">
-                            <Header headerText={ applyHeader }/>
-                        </div>
-                        <div className="page-content">
-                            <Page navigatePage={this.navigatePage} text=''/>
-                            <Form/>
-                        </div>
+                        <Header headerText={applyHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} cName={"page-content"}/>
+                        <Form/>
                     </div>
                 )
                 break;
             default:
                 display = (
                     <div>
-                        <div>
-                            <Header headerText={ homeHeader }/>
-                        </div>
-                        <div className="break"></div>
-                        <div className="page-content">
-                            <Page navigatePage={this.navigatePage} text={homeContent}/>
-                        </div>
+                        <Header headerText={homeHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content"}/>
                         {links}
                     </div>
                     )
