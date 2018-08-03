@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import "./Navigation.css"
+import { Navbar, Nav, NavItem } from 'react-bootstrap'
 
 class Navigation extends Component  {
     constructor(props){
@@ -15,7 +14,7 @@ class Navigation extends Component  {
                 <Navbar fixedTop collapseOnSelect >
                     <Navbar.Header>
                         <Navbar.Brand >
-                        <a href="#home" onClick={ navigatePage }>Progressive Talent Pipeline</a>
+                        <a href="#home" onClick={() => navigatePage(6) }>Progressive Talent Pipeline</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>

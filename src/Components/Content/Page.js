@@ -1,11 +1,10 @@
-import React, { Component } from "react"
+import React from "react"
 import Markdown from 'react-markdown'
 
 
 const Page = (props) =>  {
-   
     return ( 
-        <div>
+        <div className={props.cName}>
             <Markdown source= {props.text} />
         </div>
     );
