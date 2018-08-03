@@ -3,25 +3,21 @@ import React, { Component } from "react";
 class Form extends Component  {
     constructor(props){
         super(props)
-
-       this.state = {
-           pageLoaded: false
-       }
+        this.state = {
+            pageLoaded: false
+        }
     }
 
     componentDidMount(){
-
         setTimeout(
             function() {
                 this.setState({pageLoaded: true})
             }
             .bind(this),
             1500
-        );
-        
+        );  
     }
-       
-
+    
     render(){
         return(
             <div>
