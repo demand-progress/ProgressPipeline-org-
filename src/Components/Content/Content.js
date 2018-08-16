@@ -162,7 +162,7 @@ class Content extends Component {
             case '#apply':
                 display = (
                     <div>
-                        <Header headerText={applyHeader} key={currentKey}/>
+                        <Header headerText={applyHeader} addClass='apply' key={currentKey}/>
                         <Page navigatePage={this.navigatePage} cName={"page-content"}/>
                         <Form/>
                     </div>
