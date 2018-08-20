@@ -206,11 +206,7 @@ ol li {
 
 /* Desktops and laptops ----------- */
     /* Large screens ----------- */
-    @media only screen  and (max-width : 1000px) {
-        .header {
-            width: 80%;
-            height: 80px;
-        }
+    @media only screen  and (max-width : 1025px) {
 
         .apply-one {
             margin-left: 0;
@@ -224,6 +220,16 @@ ol li {
         .container {
             padding: 0 35px;
         }
+
+        .header {
+            padding-top: 100px;
+            /* width: 80%;
+            height: 80px; */
+        }
+
+        iframe {
+            height: 1200px;
+        }
     }
 
   
@@ -233,13 +239,17 @@ ol li {
                 height: 0px;
             }
 
+            .header {
+                padding-top: 0px;
+            }
+
             .header h1 {
                 font-size: 3em;
                 padding-top: 20px;
             }
 
             iframe {
-                height: 1400px;
+                height: 1550px;
             }
 
             .navbar-default .navbar-brand {
