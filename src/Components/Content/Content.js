@@ -1,15 +1,16 @@
-import React, { Component } from "react"
-import Header from "./Header.js"
-import Navigation from "../Navigation/Navigation.js"
-import "./content.css"
-import Page from "./Page.js"
-import Form from "./Form.js"
-import keys from '../../config/keys.js'
-import axios from 'axios'
+import React, { Component } from "react";
+import Header from "./Header.js";
+import Navigation from "../Navigation/Navigation.js";
+import "./content.css";
+import Page from "./Page.js";
+import Form from "./Form.js";
+import Footer from "./Footer.js";
+import keys from '../../config/keys.js';
+import axios from 'axios';
 
 class Content extends Component {
     constructor(props){
-        super(props)
+        super(props);
         this.state = {
             location: '',
             loading: true,
@@ -29,8 +30,8 @@ class Content extends Component {
                 whoContent: null,
                 headerText: null
             }
-        }
-        this.navigatePage = this.navigatePage.bind(this)
+        };
+        this.navigatePage = this.navigatePage.bind(this);
     }
 
     componentDidMount(){
@@ -47,7 +48,7 @@ class Content extends Component {
             }
           })
           .then(response => {
-            const { data } = response
+            const { data } = response;
               this.setState({
               textContent:{
                 homeHeader: data.blocks[0].value,
@@ -64,13 +65,13 @@ class Content extends Component {
                 whoContent: data.blocks[11].value
               },
               loading: false
-            })
+            });
           })
           .catch(console.error);
 
         this.setState({
             location: window.location.hash
-        }, () =>  getData())
+        }, () =>  getData());
     }
 
     navigatePage(selectedKey){
@@ -81,21 +82,22 @@ class Content extends Component {
             '4': '#pipeline',
             '5': '#who',
             '6': '#home'
-        }
+        };
         
         this.setState({
             location: location[selectedKey],
             currentKey: selectedKey
-        })
+        });
     }
 
     render(){
         const { headerText, homeHeader, homeContent, applyHeader, aboutHeader, aboutContent,
-            whyHeader, whyContent, pipelineHeader, pipelineContent, whoHeader, whoContent} = this.state.textContent
+            whyHeader, whyContent, pipelineHeader, pipelineContent, whoHeader, whoContent} = this.state.textContent;
         const {currentKey} = this.state;
-        let display = null
+        let display = null;
 
-      
+        const pageFooter = (<Footer footerText="The Progressive Talent Pipeline is a project of a coalition of organizations led by the" footerAnchorLink="http://www.progressivecongress.org/" footerLinkText=" Congressional Progressive Caucus Center." target="_blank"/>)
+
 
         const links = (
             <div className="links">
@@ -115,7 +117,7 @@ class Content extends Component {
                     <a href="#apply" onClick={ () => this.navigatePage(1) }><strong>{applyHeader}</strong></a>
                 </p>
             </div>
-        )
+        );
 
         switch(this.state.location) {
             case '#home':
@@ -124,40 +126,45 @@ class Content extends Component {
                         <Header headerText={homeHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content home"}/>
                         {links}
+                        {pageFooter}
                     </div>
-                    )
+                    );
                 break;
             case '#about':
                 display = (
                     <div>
                         <Header headerText={aboutHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={aboutContent} cName={"page-content about"}/>
+                        {pageFooter}
                     </div>
-                    )
+                    );
                 break;
             case '#capitol':
                 display = (
                     <div>
                         <Header headerText={whyHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={whyContent} cName={"page-content"}/>
+                        {pageFooter}
                     </div>
-                    )
+                    );
                 break;
             case '#pipeline':
                 display = (
                     <div>
                         <Header headerText={pipelineHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={pipelineContent} cName={"page-content"}/>
+                        {pageFooter}
                     </div>
-                    )
+                    );
                 break;
             case '#who':
                 display = (
                     <div>
                         <Header headerText={whoHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={whoContent} cName={"page-content"}/>
+                        {pageFooter}
                     </div>
-                    )
+                    );
                 break;
             case '#apply':
                 display = (
@@ -165,8 +172,9 @@ class Content extends Component {
                         <Header headerText={applyHeader} addClass='apply' key={currentKey}/>
                         <Page navigatePage={this.navigatePage} cName={"page-content"}/>
                         <Form/>
+                        <Footer footerText="For any questions please contact" footerAnchorLink="mailto:progressivepipelineproject@gmail.com" footerLinkText="progressivepipelineproject@gmail.com" target="_self"/>
                     </div>
-                )
+                );
                 break;
             default:
                 display = (
@@ -174,8 +182,9 @@ class Content extends Component {
                         <Header headerText={homeHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content"}/>
                         {links}
+                        {pageFooter}
                     </div>
-                    )
+                    );
         }
 
         return (
