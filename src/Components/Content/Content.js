@@ -170,7 +170,6 @@ class Content extends Component {
                 display = (
                     <div>
                         <Header headerText={applyHeader} addClass='apply' key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} cName={"page-content"}/>
                         <Form/>
                         <Footer footerText="For any questions please contact" footerAnchorLink="mailto:progressivepipelineproject@gmail.com" footerLinkText=" progressivepipelineproject@gmail.com" target="_self"/>
                     </div>
