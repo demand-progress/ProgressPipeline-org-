@@ -1,5 +1,6 @@
 Start in development mode run: 
-npm install 
+npm install
+
 npm run start
 
 Build:
