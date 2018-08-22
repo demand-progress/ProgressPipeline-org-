@@ -235,6 +235,14 @@ ol li {
   
     
     @media only screen  and (max-width : 500px) {
+            .page-content { 
+                margin-bottom: 120px;
+            }
+            
+            .footer p {
+                font-size: 10px;
+            }
+
             .header.apply {
                 height: 0px;
             }
@@ -248,20 +256,20 @@ ol li {
                 padding-top: 20px;
             }
 
-            iframe {
-                height: 1550px;
+            .home {
+                margin-bottom: 20px;
             }
 
-            .navbar-default .navbar-brand {
-                font-size: 15px;
+            iframe {
+                height: 1550px;
             }
 
             .links p {
                 padding: 10px;
             }
 
-            .home {
-                margin-bottom: 20px;
+            .navbar-default .navbar-brand {
+                font-size: 15px;
             }
             
         }
