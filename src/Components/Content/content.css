@@ -235,9 +235,9 @@ ol li {
   
     
     @media only screen  and (max-width : 500px) {
-            .page-content { 
-                margin-bottom: 120px;
-            }
+        .page-content {
+            margin-bottom: 120px;
+        }
             
             .footer p {
                 font-size: 10px;
