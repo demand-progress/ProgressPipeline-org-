@@ -179,7 +179,7 @@ class Content extends Component {
                 display = (
                     <div>
                         <Header headerText={homeHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content"}/>
+                        <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content home"}/>
                         {links}
                         {pageFooter}
                     </div>

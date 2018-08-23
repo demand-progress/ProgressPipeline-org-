@@ -258,8 +258,9 @@ ol li {
             }
 
             .home {
-                margin-bottom: 20px;
+                margin: 50px 0px 20px 0px;
             }
+            
 
             iframe {
                 height: 1550px;
