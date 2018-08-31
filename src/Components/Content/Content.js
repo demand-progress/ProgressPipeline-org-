@@ -49,18 +49,19 @@ class Content extends Component {
           })
           .then(response => {
             const { data } = response;
+            console.log(data);
               this.setState({
               textContent:{
                 homeHeader: data.blocks[0].value,
                 homeContent: data.blocks[1].value,
                 applyHeader: data.blocks[2].value,
                 applyContent: data.blocks[3].value,
-                aboutHeader: data.blocks[4].value,
-                aboutContent: data.blocks[5].value, 
+                aboutHeader: data.blocks[5].value,
+                aboutContent: data.blocks[4].value, 
                 whyHeader: data.blocks[6].value,
                 whyContent: data.blocks[7].value,
-                pipelineHeader: data.blocks[8].value,
-                pipelineContent: data.blocks[9].value,
+                pipelineHeader: data.blocks[9].value,
+                pipelineContent: data.blocks[8].value,
                 whoHeader: data.blocks[10].value,
                 whoContent: data.blocks[11].value
               },
@@ -97,7 +98,7 @@ class Content extends Component {
         let display = null;
 
         const pageFooter = (<Footer footerText="The Progressive Talent Pipeline is a project of a coalition of organizations led by the" footerAnchorLink="http://www.progressivecongress.org/" footerLinkText=" Congressional Progressive Caucus Center." target="_blank"/>)
-
+      
 
         const links = (
             <div className="links">
