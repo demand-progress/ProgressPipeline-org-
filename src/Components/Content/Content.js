@@ -49,7 +49,6 @@ class Content extends Component {
           })
           .then(response => {
             const { data } = response;
-            console.log(data);
               this.setState({
               textContent:{
                 homeHeader: data.blocks[0].value,
