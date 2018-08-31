@@ -156,8 +156,7 @@ p {
 }
 
 .about p:nth-of-type(15) {
-    text-decoration: underline; 
-    color: red;
+    text-decoration: underline;
 }
 
 .links{
