@@ -48,7 +48,7 @@ class Content extends Component {
           .then(response => {
             const { data } = response;
             
-            const textData = {}
+            const textData = {};
 
             data['blocks'].forEach((textObject) => {
                 const {apiId, value} = textObject;
