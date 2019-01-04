@@ -16,19 +16,17 @@ class Content extends Component {
             loading: true,
             currentKey: null,
             textContent: {
-                homeHeader: null,
-                homeContent: null,
-                applyHeader: null,
-                applyContent: null,
                 aboutHeader: null,
-                aboutContent: null,
-                whyHeader: null,
-                whyContent: null, 
-                pipelineHeader: null,
-                pipelineContent: null,
-                whoHeader: null,
-                whoContent: null,
-                headerText: null
+                aboutMainContent: null,
+                applyHeader: null,
+                home: null,
+                homeHeader: null,
+                homeMainContent: null,
+                whoWeReLookingForHeader: null,
+                whoWeReLookingForContent: null,
+                whyApplyHeader: null,
+                whyApplyContent: null,
+                whyWorkMainContent: null, 
             }
         };
         this.navigatePage = this.navigatePage.bind(this);
@@ -49,21 +47,16 @@ class Content extends Component {
           })
           .then(response => {
             const { data } = response;
+            
+            const textData = {};
+
+            data['blocks'].forEach((textObject) => {
+                const {apiId, value} = textObject;
+                textData[apiId] = value; 
+            })
+            
               this.setState({
-              textContent:{
-                homeHeader: data.blocks[0].value,
-                homeContent: data.blocks[1].value,
-                applyHeader: data.blocks[2].value,
-                applyContent: data.blocks[3].value,
-                aboutHeader: data.blocks[5].value,
-                aboutContent: data.blocks[4].value, 
-                whyHeader: data.blocks[6].value,
-                whyContent: data.blocks[7].value,
-                pipelineHeader: data.blocks[9].value,
-                pipelineContent: data.blocks[8].value,
-                whoHeader: data.blocks[10].value,
-                whoContent: data.blocks[11].value
-              },
+              textContent:textData,
               loading: false
             });
           })
@@ -91,8 +84,21 @@ class Content extends Component {
     }
 
     render(){
-        const { headerText, homeHeader, homeContent, applyHeader, aboutHeader, aboutContent,
-            whyHeader, whyContent, pipelineHeader, pipelineContent, whoHeader, whoContent} = this.state.textContent;
+        const { aboutHeader,
+                aboutMainContent,
+                applyHeader,
+                home,
+                homeHeader,
+                homeMainContent,
+                whoWeReLookingForHeader,
+                whoWeReLookingForContent,
+                whyApplyHeader,
+                whyApplyContent,
+                whyWorkMainContent, 
+                } = this.state.textContent;
+
+                
+
         const {currentKey} = this.state;
         let display = null;
 
@@ -105,13 +111,13 @@ class Content extends Component {
                     <a href="#about" onClick={ () => this.navigatePage(2) }><strong>{aboutHeader}</strong></a>
                 </p>
                 <p>
-                    <a href="#capitol" onClick={ () => this.navigatePage(3) }><strong>{whyHeader}</strong></a>
+                    <a href="#capitol" onClick={ () => this.navigatePage(3) }><strong>{home}</strong></a>
                 </p>
                 <p>
                     <a href="#pipeline" onClick={ () => this.navigatePage(4)}><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
                 </p>
                 <p>
-                    <a href="#who" onClick={ () => this.navigatePage(5) }><strong>{whoHeader}</strong></a>
+                    <a href="#who" onClick={ () => this.navigatePage(5) }><strong>{whoWeReLookingForHeader}</strong></a>
                 </p>
                 <p>
                     <a href="#apply" onClick={ () => this.navigatePage(1) }><strong>{applyHeader}</strong></a>
@@ -124,7 +130,7 @@ class Content extends Component {
                 display = (
                     <div>
                         <Header headerText={homeHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content home"}/>
+                        <Page navigatePage={this.navigatePage} text={homeMainContent} cName={"page-content home"}/>
                         {links}
                         {pageFooter}
                     </div>
@@ -134,7 +140,7 @@ class Content extends Component {
                 display = (
                     <div>
                         <Header headerText={aboutHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={aboutContent} cName={"page-content about"}/>
+                        <Page navigatePage={this.navigatePage} text={aboutMainContent} cName={"page-content about"}/>
                         {pageFooter}
                     </div>
                     );
@@ -142,8 +148,8 @@ class Content extends Component {
             case '#capitol':
                 display = (
                     <div>
-                        <Header headerText={whyHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={whyContent} cName={"page-content"}/>
+                        <Header headerText={home} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={whyWorkMainContent} cName={"page-content"}/>
                         {pageFooter}
                     </div>
                     );
@@ -151,8 +157,8 @@ class Content extends Component {
             case '#pipeline':
                 display = (
                     <div>
-                        <Header headerText={pipelineHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={pipelineContent} cName={"page-content"}/>
+                        <Header headerText={whyApplyHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={whyApplyContent} cName={"page-content"}/>
                         {pageFooter}
                     </div>
                     );
@@ -160,8 +166,8 @@ class Content extends Component {
             case '#who':
                 display = (
                     <div>
-                        <Header headerText={whoHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={whoContent} cName={"page-content"}/>
+                        <Header headerText={whoWeReLookingForHeader} key={currentKey}/>
+                        <Page navigatePage={this.navigatePage} text={whoWeReLookingForContent} cName={"page-content"}/>
                         {pageFooter}
                     </div>
                     );
@@ -179,7 +185,7 @@ class Content extends Component {
                 display = (
                     <div>
                         <Header headerText={homeHeader} key={currentKey}/>
-                        <Page navigatePage={this.navigatePage} text={homeContent} cName={"page-content home"}/>
+                        <Page navigatePage={this.navigatePage} text={homeMainContent} cName={"page-content home"}/>
                         {links}
                         {pageFooter}
                     </div>
