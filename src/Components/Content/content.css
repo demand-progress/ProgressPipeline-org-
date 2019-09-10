@@ -80,6 +80,7 @@ a:focus, a:hover {
     background-color: #212121;
     color: white;
     text-align: center;
+    margin-top: 50px;
 }
 
 .footer a {
@@ -190,7 +191,7 @@ ol li {
 }
 
 .page-content{
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
 .navbar-default {
