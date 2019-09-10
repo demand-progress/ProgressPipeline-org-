@@ -5,7 +5,6 @@ import "./content.css";
 import Page from "./Page.js";
 import Form from "./Form.js";
 import Footer from "./Footer.js";
-import keys from '../../config/keys.js';
 import axios from 'axios';
 
 class Content extends Component {
@@ -34,15 +33,12 @@ class Content extends Component {
 
     componentDidMount(){
         window.scrollTo(0, 0);
-        const { tipeAuth, tipeId } = keys;
 
         const getData = () => axios({
             method: "get",
-            url: 'https://api.tipe.io/api/v1/document/5b4630ca1045420013ea11f3',
+            url: '/public/content.json',
             headers: {
               'Content-Type': 'application/json',
-              'Authorization': tipeAuth,
-              'Tipe-Id': tipeId
             }
           })
           .then(response => {
