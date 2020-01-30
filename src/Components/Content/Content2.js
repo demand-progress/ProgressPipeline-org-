@@ -7,7 +7,7 @@ import Form from "./Form.js";
 import Footer from "./Footer.js";
 import axios from 'axios';
 
-class Content extends Component {
+class Content2 extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -212,4 +212,4 @@ class Content extends Component {
 }
 
   
-export default Content;
+export default Content2;
