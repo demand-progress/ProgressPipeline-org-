@@ -98,7 +98,7 @@ class Content extends Component {
         const {currentKey} = this.state;
         let display = null;
 
-        const pageFooter = (<Footer footerText="The Progressive Talent Pipeline is a project of a coalition of organizations led by the" footerAnchorLink="http://www.progressivecongress.org/" footerLinkText=" Congressional Progressive Caucus Center." target="_blank"/>)
+        const pageFooter = (<Footer footerText="This site is under construction. Check back soon for application information for the 2020 Progressive Talent Pipeline Cohort." footerAnchorLink="http://www.progressivecongress.org/" footerLinkText="" target="_blank"/>)
       
 
         const links = (
