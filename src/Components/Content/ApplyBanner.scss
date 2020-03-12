@@ -1,0 +1,13 @@
+@import "../../styles/variables.scss";
+
+.apply-banner.footer{
+  background-color: $popColor;
+  color: $black;
+  padding: 50px;
+  font-size: 3rem;
+  font-weight: bold;
+  a{
+    color: $white;
+  }
+
+}

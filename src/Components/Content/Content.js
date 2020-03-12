@@ -113,33 +113,12 @@ class Content extends Component {
         const pageFooter = (<Footer footerText="This site is under construction. Check back soon for application information for the 2020 Progressive Talent Pipeline Cohort." footerAnchorLink="http://www.progressivecongress.org/" footerLinkText="" target="_blank"/>)
       
 
-        const links = (
-            <div className="links">
-                <p>
-                    <a href="#about" onClick={ () => this.navigatePage(2) }><strong>{aboutHeader}</strong></a>
-                </p>
-                <p>
-                    <a href="#capitol" onClick={ () => this.navigatePage(3) }><strong>{home}</strong></a>
-                </p>
-                <p>
-                    <a href="#pipeline" onClick={ () => this.navigatePage(4)}><strong>Why Apply for the Progressive Talent Pipeline</strong></a>
-                </p>
-                <p>
-                    <a href="#who" onClick={ () => this.navigatePage(5) }><strong>{whoWeReLookingForHeader}</strong></a>
-                </p>
-                <p>
-                    <a href="#apply" onClick={ () => this.navigatePage(1) }><strong>{applyHeader}</strong></a>
-                </p>
-            </div>
-        );
-
         switch(this.state.location) {
             case '#home':
                 display = (
                     <div>
                         <Header headerText={homeHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={homeMainContent} cName={"page-content home"}/>
-                        {links}
                         {pageFooter}
                     </div>
                     );
@@ -194,7 +173,6 @@ class Content extends Component {
                     <div>
                         <Header headerText={homeHeader} key={currentKey}/>
                         <Page navigatePage={this.navigatePage} text={homeMainContent} cName={"page-content home"}/>
-                        {links}
                         {pageFooter}
                     </div>
                     );

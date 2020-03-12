@@ -14,7 +14,7 @@ class Navigation extends Component  {
                 <Navbar fixedTop collapseOnSelect >
                     <Navbar.Header>
                         <Navbar.Brand >
-                        <a href="#home" onClick={() => navigatePage(6) }>Progressive Talent Pipeline</a>
+                        <a href="#home" onClick={() => navigatePage('home') }>Progressive Talent Pipeline</a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -22,21 +22,18 @@ class Navigation extends Component  {
                         <Nav> 
                         </Nav>
                         <Nav pullRight onSelect={navigatePage}>
-                        <NavItem eventKey={1} href="#apply">
-                            Apply
-                        </NavItem>
-                        <NavItem eventKey={2} href="#about">
-                            About the Program
-                        </NavItem>
-                        <NavItem eventKey={3} href="#capitol">
-                            Why Work on Capitol Hill
-                        </NavItem>
-                        <NavItem eventKey={4} href="#pipeline">
-                            Why Apply for the Pipeline?
-                        </NavItem>
-                        <NavItem eventKey={5} href="#who">
-                            Who we are looking for
-                        </NavItem>
+                            <NavItem eventKey={'about'} href="#about">
+                                About
+                            </NavItem>
+                            <NavItem eventKey={'why'} href="#why">
+                                Why?
+                            </NavItem>
+                            <NavItem eventKey={'process'} href="#process">
+                                The Process
+                            </NavItem>
+                            <NavItem className="button" href="https://forms.gle/BxSMTK5HmkW6Xht29" target="_blank">
+                                Apply Now
+                            </NavItem>
                         </Nav>
                     </Navbar.Collapse>
                 </Navbar>    
