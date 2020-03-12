@@ -25,7 +25,7 @@ body a {
     box-shadow: 2px 2px #888888;
 }
 
-.about p:nth-child(n+7):nth-child(-n+12){
+.about p:nth-child(n+7):nth-child(-n+10){
     margin-left: 40px;
 }
 
