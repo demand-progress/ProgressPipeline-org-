@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+.home{
+  .banner{
+    padding: 80px 0 300px;
+  }
+  .wrap{
+    padding: 60px 0;
+    background-color: $gray-bg;
+    h2{
+      color: $blue;
+    }
+    .body{
+      padding: 30px 0px;
+      text-align: center;
+    }
+  }
+  .types{
+    display: flex;
+    justify-content: space-between;
+    .type{
+      padding: 15px 20px;
+      background-color: $white;
+      margin-right: 25px;
+      flex: 1;
+      &:last-of-type{
+        margin-right: 0;
+      }
+      h4{
+        text-align: center;
+      }
+      .list{
+        color: $text-dark;
+        li{
+          padding-bottom: 15px;
+        }
+      }
+
+    }
+  }
+}

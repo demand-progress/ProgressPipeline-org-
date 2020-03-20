@@ -8,9 +8,6 @@ body {
     font-family: 'open sans';
 }
 
-body a {
-    color: $popColor;
-}
 
 #button {
     display: block;
@@ -102,7 +99,7 @@ body a {
 }
 
 header.main-header {
-    margin-bottom: 90px;
+    margin-bottom: 80px;
 }
 
 .header {
@@ -207,6 +204,7 @@ ol li {
     border-color: white!important;
     -webkit-box-shadow: inset 0 1px 0 white, 0 1px 5px white;
     box-shadow: inset 0 1px 0 white, 0 1px 5px white;
+    background-color: $white;
 }
 
 /* ----------- Non-Retina Screens ----------- */
@@ -252,13 +250,11 @@ ol li {
 
     @media only screen  and (max-width : 9090px) {  
         header.main-header {
-            margin-bottom: 150px;
         }
     }
 
     @media only screen  and (max-width : 767px) {  
         header.main-header {
-            margin-top: -100px;
         }
     }
     
@@ -286,7 +282,6 @@ ol li {
             }
 
             header.main-header {
-                margin-top: -90px;
             }
 
             .home {
@@ -318,7 +313,6 @@ ol li {
         }
 
         header.main-header {
-            margin-top: -80px;
         }
 
         .apply {

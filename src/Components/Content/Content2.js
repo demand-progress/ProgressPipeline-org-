@@ -128,7 +128,7 @@ class Content2 extends Component {
         }
 
         return (
-            <div style={{display: this.state.loading ? 'none': 'block'}}>
+            <div className="content-2" style={{display: this.state.loading ? 'none': 'block'}}>
                 <header className="main-header">
                     <Navigation navigatePage={this.navigatePage}/>
                 </header>

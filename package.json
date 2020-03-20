@@ -31,10 +31,17 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "dependencies": {
+    "autoprefixer": "^9.7.4",
     "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "normalize.css": "^8.0.0",
+    "postcss-loader": "^3.0.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-bootstrap": "^0.32.1",
