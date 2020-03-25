@@ -7,6 +7,11 @@ body {
     vertical-align: baseline;
     font-family: 'open sans';
 }
+.content-2{
+    .page{
+        padding-top: 80px;
+    }
+}
 
 
 #button {
@@ -32,6 +37,8 @@ body {
 .navbar-default {
     background-image: none !important;
     background-color: transparent;
+    border: none;
+    box-shadow: none;
 }
 
  .navbar-default .navbar-nav>li>a {
@@ -51,13 +58,11 @@ body {
 
 /* .navbar-default .navbar-brand:focus, */
 
+.navbar-default .navbar-nav>li>a:focus,
 .navbar-default .navbar-nav>li>a:hover {
-    color: $popColor;
+    text-shadow: -2px 2px 0px $popColor;
 }
 
-.navbar-default .navbar-nav>li>a:focus {
-    color: #9f1719;
-}
 .navbar-nav{
     .button{
         a{
@@ -98,9 +103,6 @@ body {
     height: 120px;
 }
 
-header.main-header {
-    margin-bottom: 80px;
-}
 
 .header {
     width:100%;
@@ -200,12 +202,6 @@ ol li {
     margin-bottom: 80px;
 }
 
-.navbar-default {
-    border-color: white!important;
-    -webkit-box-shadow: inset 0 1px 0 white, 0 1px 5px white;
-    box-shadow: inset 0 1px 0 white, 0 1px 5px white;
-    background-color: $white;
-}
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
@@ -239,9 +235,6 @@ ol li {
             height: 80px; */
         }
 
-        /* header.main-header {
-            margin-bottom: 150px;
-        } */
 
         iframe {
             height: 1200px;
@@ -249,13 +242,9 @@ ol li {
     }
 
     @media only screen  and (max-width : 9090px) {  
-        header.main-header {
-        }
     }
 
     @media only screen  and (max-width : 767px) {  
-        header.main-header {
-        }
     }
     
     @media only screen  and (max-width : 500px) {
@@ -312,8 +301,6 @@ ol li {
             margin: 15px auto;
         }
 
-        header.main-header {
-        }
 
         .apply {
             margin: 35px auto;
