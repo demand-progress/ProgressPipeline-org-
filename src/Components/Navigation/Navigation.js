@@ -22,14 +22,17 @@ class Navigation extends Component  {
                         <Nav> 
                         </Nav>
                         <Nav pullRight onSelect={navigatePage}>
-                            <NavItem eventKey={'about'} href="#about">
-                                About
+                            <NavItem eventKey={'process'} href="#process">
+                                The Process
                             </NavItem>
                             <NavItem eventKey={'why'} href="#why">
                                 Why?
                             </NavItem>
-                            <NavItem eventKey={'process'} href="#process">
-                                The Process
+                            <NavItem eventKey={'jobs'} href="#jobs">
+                                Jobs
+                            </NavItem>
+                            <NavItem eventKey={'about'} href="#about">
+                                About
                             </NavItem>
                             <NavItem className="button" href="https://forms.gle/BxSMTK5HmkW6Xht29" target="_blank">
                                 Apply Now

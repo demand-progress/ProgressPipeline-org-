@@ -4,7 +4,7 @@ import "./ApplyBanner.scss"
 export default class ApplyBanner extends Component {
   render(){
     return <div className="apply-banner footer">
-      Are you ready to contribute your ideas to our nation? <a href="" target="_blank">Apply Now ></a>
+      Are you ready to contribute your ideas<br/>to our nation? <a href="" target="_blank">Apply Now ></a>
     </div>
   }
 }

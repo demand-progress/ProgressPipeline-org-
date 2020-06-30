@@ -1,7 +1,13 @@
 @import "../../styles/variables.scss";
 .home{
   .banner{
-    padding: 80px 0 300px;
+    margin-top: 50px;
+    padding: 0px 0 430px;
+    background: url(../../images/homepageimage.png) center bottom no-repeat;
+    background-size: contain;
+    h2{
+      margin: 0 auto;
+    }
   }
   .wrap{
     padding: 60px 0;
@@ -18,9 +24,9 @@
     display: flex;
     justify-content: space-between;
     .type{
-      padding: 15px 20px;
+      padding: 15px 20px 15px 15px;
       background-color: $white;
-      margin-right: 25px;
+      margin-right: 35px;
       flex: 1;
       &:last-of-type{
         margin-right: 0;
@@ -30,6 +36,8 @@
       }
       .list{
         color: $text-dark;
+        font-size: 0.85rem;
+        font-weight: 300;
         li{
           padding-bottom: 15px;
         }

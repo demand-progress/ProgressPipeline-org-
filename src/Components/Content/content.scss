@@ -1,12 +1,5 @@
 @import "../../styles/variables.scss";
 
-body {
-    color: $text-med;
-    font-size: 14px;
-    -webkit-font-smoothing: antialiased;
-    vertical-align: baseline;
-    font-family: 'open sans';
-}
 .content-2{
     .page{
         padding-top: 80px;
@@ -36,18 +29,18 @@ body {
 .navbar,
 .navbar-default {
     background-image: none !important;
-    background-color: transparent;
+    background-color: #fff;
     border: none;
     box-shadow: none;
 }
 
  .navbar-default .navbar-nav>li>a {
-    font-size: 2rem;
+    font-size: 1.1rem;
     color: $black;
     line-height: 1.1;
     text-transform: uppercase;
     padding: 15px 20px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .navbar-default .navbar-brand {
@@ -158,11 +151,6 @@ ol li {
      font-size: 18px;
 }
 
-p {
-    font-size: 16px;
-    line-height: 27px;
-    font-weight: 500;
-}
 
 .about p:nth-of-type(15) {
     text-decoration: underline;

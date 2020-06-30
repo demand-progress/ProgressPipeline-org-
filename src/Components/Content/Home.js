@@ -16,9 +16,9 @@ export default class Home extends Component  {
     const { page } = this.state
     if (!page) return null
     return <div className="home">
-      <div className="container">
-        <div className="banner">
-          <h2>We want Congress to be staffed with progreessives that represent America</h2>
+      <div className="banner">
+        <div className="container">
+          <h2>We want Congress to be staffed with<br/>progressives that represent America.</h2>
         </div>
       </div>
       <div className="wrap">
