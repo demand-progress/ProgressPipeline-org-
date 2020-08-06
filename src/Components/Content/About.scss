@@ -2,7 +2,9 @@
 
 .about{
   .banner{
-    padding: 80px 0 300px;
+    background: url(../../images/personnelispolicy.svg) top center no-repeat;
+    height: 120px;
+    margin-top: 120px;
   }
   .logos{
     display: flex;
@@ -49,20 +51,112 @@
       }
     }
   }
+  .green-split{
+    background: url(../../images/colorline.svg) center center repeat-y;
+    position: relative;
+  }
   .staff{
-    padding: 50px 0;
-    h2{
-      color: $blue;
-      margin-bottom: 30px;
+    display: flex;
+    > div{
+      width: 50%;
+      box-sizing: border-box;
+      padding: 50px 0;
+    }
+    .green{
+      padding-right: 50px;
+      h2{
+        text-align: left;
+        color: $blue;
+        margin: 0;
+        margin-bottom: 40px;
+        font-size: 2.5rem;
+      }
+      a.btn{
+        display: inline-block;
+        background-color: $blue;
+        color: $white;
+        padding: 10px 0px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 1rem;
+        border-radius: 0;
+        width: 100%;
+
+      }
     }
     .staffs{
-      display: flex;
-      flex-wrap: wrap;
+      padding-left: 50px;
       .staff-member{
         font-size: 20px;
-        width: 50%;
-        display: flex;
-        flex-direction: column;
+        img{
+          width: 100%;
+          display: block;
+        }
+        .info{
+          b{
+            display: block;
+            color: $white;
+            font-weight: 900;
+            font-size: 1.6rem;;
+            margin: 20px 0 10px;
+          }
+          .line{
+            display: flex;
+            justify-content: space-between;
+            color: $text-light;
+            font-weight: 200;
+            a{
+              display: inline-block;
+              height: 30px;
+              width: 30px;
+              background: url(../../images/twitter.svg) center center no-repeat;
+              margin-left: 15px;
+              background-size: 90%;
+              &.email{
+                background-image: url(../../images/mail.svg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.about-page{
+  .apply-banner{
+    display: none;
+  }
+}
+@media(max-width: $tablet-max){
+  .about{
+    .banner{
+      background-size: 90%;
+      height: 50px;
+      margin-top: 80px;
+    }
+    .green-split{
+      background: none;
+    }
+    .staff{
+      .green{
+        background-color: $green;
+        padding: 50px;
+        h2{
+          font-size: 1.8rem;
+        }
+      }
+      .staffs{
+        background-color: $blue;
+        padding-right: 50px;
+
+      }
+      flex-direction: column;
+      padding-left: 0;
+      padding-right: 0;
+      > div{
+        box-sizing: border-box;
+        overflow: hidden;
+        width: 100%;
       }
     }
   }

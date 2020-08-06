@@ -1,4 +1,4 @@
-
+@import "../../styles/variables.scss";
 .why{
   padding-top: 42vw;
   background: url(../../images/capitol.jpg) top center no-repeat;
@@ -11,7 +11,24 @@
     margin: 10px 10px 20px;
   }
 }
-.why-page{
+.why-page.content-2{
   .page{
+    padding-top: 40px;
+  }
+}
+
+@media(max-width: $tablet-max){
+  .why-page.content-2{
+    .page{
+      padding-top: 80px;
+    }
+  }
+  .why{
+    padding-top: 150px;
+    p{
+      margin-right: 0;
+      margin-left: 0;
+    }
+
   }
 }

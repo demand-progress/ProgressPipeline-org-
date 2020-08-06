@@ -33,12 +33,40 @@ body{
       color: $popColor;
     }
   }
+  .carousel{
+    .control-dots{
+      .dot{
+        box-shadow: none;
+        background-color: #d8d8d8;
+        width: 10px;
+        opacity: 1;
+        outline: none;
+        &.selected{
+          background-color: $popColor;
+        }
+      }
+    }
+    .slide{
+      background-color: transparent;
+    }
+  }
+  .navbar-default .navbar-toggle{
+    border-color: transparent;
+    margin-right: 0;
+    .icon-bar{
+      background-color: $blue;
+      height: 4px;
+    }
+  }
 }
 .bg{
   background-color: $gray-bg;;
   h2{
     color: $blue;
   }
+}
+.blue {
+  color: $blue;
 }
 h2, h3, h4{
   font-weight: 900;
@@ -48,7 +76,38 @@ h2, h3, h4{
 }
 h2{
   font-size: 2rem;
+  margin: 3rem 0 2rem;
 }
 h4{
   color: $blue;
+}
+.come-in {
+  transform: translateY(150px);
+  animation: come-in 0.3s ease forwards;
+}
+.come-in:nth-child(2) {
+  animation-duration: 0.6s; /* So they look staggered */
+}
+.come-in:nth-child(3) {
+  animation-duration: 0.9s; /* So they look staggered */
+}
+
+@keyframes come-in {
+  to { transform: translateY(0); }
+}
+
+@media(max-width: $tablet-max){
+  h2{
+    font-size: 1.8rem;
+  }
+  h2, h3, h4{
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 767px) {
+  body .navbar-default .navbar-brand{
+    width: 50px;
+    background: url(../images/p-logo.svg) center center no-repeat;
+  }
+  
 }

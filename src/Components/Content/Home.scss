@@ -6,11 +6,11 @@
     background: url(../../images/homepageimage.png) center bottom no-repeat;
     background-size: contain;
     h2{
-      margin: 0 auto;
+      margin: 1rem auto 3rem;
     }
   }
   .wrap{
-    padding: 60px 0;
+    padding: 0px 0 50px;
     background-color: $gray-bg;
     h2{
       color: $blue;
@@ -42,7 +42,49 @@
           padding-bottom: 15px;
         }
       }
-
     }
+  }
+  .testimonials{
+    padding-top: 40px;
+    padding-bottom: 50px;
+    .carousel {
+      background: url(../../images/quote.svg) 50px 35px no-repeat;
+      .slide {
+        background: transparent;
+      }
+      .testimonial{
+        font-size: 1.6rem;;
+        font-weight: 300;
+        color: $text-med;
+        padding: 50px 80px;
+        position: relative;
+        a{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+@media(max-width: $tablet-max){
+  .home{
+    .banner{
+      padding-bottom: 120px;
+    }
+    .types{
+      flex-direction: column;
+      .type{
+        margin: 0 0 30px;
+      }
+    }
+    .testimonials{
+      .carousel{
+        background-position: 0px 40px;
+        .testimonial{
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+
   }
 }

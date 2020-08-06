@@ -3,13 +3,21 @@
 .apply-banner.footer{
   background-color: $popColor;
   color: $black;
-  padding: 50px 100px;
+  padding: 70px 100px;
   font-size: 2rem;
   font-weight: 900;
   position: relative;
   margin-top: 25px;
   a{
-    color: $white;
+    color: $blue;
+    &:hover{
+      color: $white;
+    }
   }
-
+}
+@media(max-width: $tablet-max){
+  .apply-banner.footer{
+    font-size: 1.8rem;
+    padding: 30px;
+  }
 }

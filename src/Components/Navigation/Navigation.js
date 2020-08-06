@@ -14,7 +14,7 @@ class Navigation extends Component  {
                 <Navbar fixedTop collapseOnSelect >
                     <Navbar.Header>
                         <Navbar.Brand >
-                        <a href="#home" onClick={() => navigatePage('home') }>Progressive Talent Pipeline</a>
+                            <a href="#home" onClick={() => navigatePage('home') }></a>
                         </Navbar.Brand>
                         <Navbar.Toggle />
                     </Navbar.Header>
@@ -34,7 +34,7 @@ class Navigation extends Component  {
                             <NavItem eventKey={'about'} href="#about">
                                 About
                             </NavItem>
-                            <NavItem className="button" href="https://forms.gle/BxSMTK5HmkW6Xht29" target="_blank">
+                            <NavItem className="button" href="https://progressivetalentpipeline.applytojob.com/apply" target="_blank">
                                 Apply Now
                             </NavItem>
                         </Nav>
