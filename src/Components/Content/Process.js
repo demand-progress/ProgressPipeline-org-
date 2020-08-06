@@ -12,7 +12,6 @@ export default class Process extends Component  {
   componentDidMount() {
     getPage(350)
       .then(page => {
-        console.log(page);
         this.setState({ page })
       })
   }

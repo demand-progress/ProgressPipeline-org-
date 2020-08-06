@@ -9,7 +9,6 @@ export default class Jobs extends Component  {
   componentDidMount() {
     getPage(540)
       .then(page => {
-        console.log(page);
         this.setState({ page })
       })
   }

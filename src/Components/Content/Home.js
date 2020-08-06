@@ -18,7 +18,6 @@ export default class Home extends Component  {
   render() {
     const { page } = this.state
     if (!page) return null
-    console.log(page);
     return <div className="home">
       <div className="banner">
         <div className="container">
