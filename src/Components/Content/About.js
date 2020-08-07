@@ -52,7 +52,7 @@ export default class About extends Component  {
                   <div>{s.position}</div>
                   <div>
                     <a className="email" href={`mailto:${s.email}`}/>
-                    <a className="twitter" href={s.twitter} />
+                    {/* <a className="twitter" href={s.twitter} /> */}
                   </div>
                 </div>
               </div>

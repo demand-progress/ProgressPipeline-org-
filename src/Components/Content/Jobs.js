@@ -22,6 +22,7 @@ export default class Jobs extends Component  {
           <TwitterTimelineEmbed
             sourceType="profile"
             screenName="opengovjobs"
+            options={{height: 600}}
           />
         </div>
       </div>
