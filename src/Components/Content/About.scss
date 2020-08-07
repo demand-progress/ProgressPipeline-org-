@@ -6,6 +6,10 @@
     height: 120px;
     margin-top: 120px;
   }
+  h2{
+    color: $blue;
+    text-align: left;
+  }
   .logos{
     display: flex;
     border-top: 1px solid $text-med;
