@@ -45,7 +45,7 @@ export default class About extends Component  {
           </div>
           <div className="staffs">
             {page.acf.staff.map((s, i) => <div className="staff-member" key={`staff-${i}`}>
-              <img src={s.image.sizes.medium} />
+              <img src={s.image.sizes.large} />
               <div className="info">
                 <b>{s.name}</b>
                 <div className="line">
