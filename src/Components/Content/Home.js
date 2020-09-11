@@ -21,8 +21,9 @@ export default class Home extends Component  {
     return <div className="home">
       <div className="banner">
         <div className="container">
-        <h2 dangerouslySetInnerHTML={{ __html: page.acf.headline }} />
+          <h2 dangerouslySetInnerHTML={{ __html: page.acf.headline }} />
         </div>
+        <div className='people'></div>
       </div>
       <div className="wrap">
         <div className="container">

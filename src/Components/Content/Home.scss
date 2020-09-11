@@ -2,11 +2,13 @@
 .home{
   .banner{
     margin-top: 50px;
-    padding: 0px 0 430px;
-    background: url(../../images/homepageimage.png) center bottom no-repeat;
-    background-size: contain;
     h2{
-      margin: 1rem auto 3rem;
+      margin: 1rem auto 0;
+    }
+    .people{
+      padding: 0px 0 30%;
+      background: url(../../images/homepageimage.png) center bottom no-repeat;
+      background-size: contain;
     }
   }
   .wrap{
@@ -65,11 +67,8 @@
     }
   }
 }
-@media(max-width: $tablet-max){
+@media(max-width: $tablet-max + 1){
   .home{
-    .banner{
-      padding-bottom: 120px;
-    }
     .types{
       flex-direction: column;
       .type{
@@ -86,5 +85,14 @@
       }
     }
 
+  }
+}
+@media(max-width: $phone-max){
+  .home{
+    .banner{
+      h2{
+        font-size: 1.5rem;;
+      }
+    }
   }
 }
