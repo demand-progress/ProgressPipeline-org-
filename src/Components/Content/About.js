@@ -25,7 +25,7 @@ export default class About extends Component  {
       <div className="container">
         <div dangerouslySetInnerHTML={{ __html: page.content.rendered }} className="body"></div>
       </div>
-      {/* <div className="bg">
+      <div className="bg">
         <div className="container">
           <h2>Advisory Board</h2>
           <div className="advisors">
@@ -36,7 +36,7 @@ export default class About extends Component  {
             </div>)}
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="green-split">
         <div className="staff container">
           <div className="green">
