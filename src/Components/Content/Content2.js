@@ -13,6 +13,7 @@ import Jobs from './Jobs'
 import Why from './Why'
 import Footer from "./Footer.js";
 import axios from 'axios';
+import Faq from "./FAQ.js";
 
 class Content2 extends Component {
     constructor(props){
@@ -40,6 +41,10 @@ class Content2 extends Component {
                 break;
             case 'process':
                 display = <Process />
+                banner = <span>Do you want to help form or carry out progressive policy?</span>
+                break;
+            case 'faq':
+                display = <Faq />
                 banner = <span>Do you want to help form or carry out progressive policy?</span>
                 break;
             case 'why':

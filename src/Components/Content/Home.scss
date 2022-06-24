@@ -46,23 +46,23 @@
       }
     }
   }
-  .testimonials{
-    padding-top: 40px;
-    padding-bottom: 50px;
-    .carousel {
-      background: url(../../images/quote.svg) 50px 35px no-repeat;
-      .slide {
-        background: transparent;
-      }
-      .testimonial{
-        font-size: 1.6rem;;
-        font-weight: 300;
-        color: $text-med;
-        padding: 50px 80px;
-        position: relative;
-        a{
-          text-decoration: underline;
-        }
+}
+.testimonials{
+  padding-top: 40px;
+  padding-bottom: 50px;
+  .carousel {
+    background: url(../../images/quote.svg) 50px 35px no-repeat;
+    .slide {
+      background: transparent;
+    }
+    .testimonial{
+      font-size: 1.6rem;;
+      font-weight: 300;
+      color: $text-med;
+      padding: 50px 80px;
+      position: relative;
+      a{
+        text-decoration: underline;
       }
     }
   }

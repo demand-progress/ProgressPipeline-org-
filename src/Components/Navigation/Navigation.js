@@ -28,6 +28,9 @@ class Navigation extends Component  {
                             <NavItem eventKey={'why'} href="#why">
                                 Why?
                             </NavItem>
+                            <NavItem eventKey={'faq'} href="#faq">
+                                FAQ 
+                            </NavItem>
                             {/* <NavItem eventKey={'jobs'} href="#jobs">
                                 Jobs
                             </NavItem> */}
