@@ -28,14 +28,14 @@ class Navigation extends Component  {
                             <NavItem eventKey={'why'} href="#why">
                                 Why?
                             </NavItem>
-                            <NavItem eventKey={'faq'} href="#faq">
-                                FAQ 
-                            </NavItem>
                             {/* <NavItem eventKey={'jobs'} href="#jobs">
                                 Jobs
                             </NavItem> */}
                             <NavItem eventKey={'about'} href="#about">
                                 About
+                            </NavItem>
+                            <NavItem eventKey={'faq'} href="#faq">
+                                FAQ 
                             </NavItem>
                             <NavItem className="button" href="https://progressivetalentpipeline.applytojob.com/apply" target="_blank">
                                 Apply Now
