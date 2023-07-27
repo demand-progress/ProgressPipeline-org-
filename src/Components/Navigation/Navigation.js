@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Navbar, Nav, NavItem } from 'react-bootstrap'
+import { APPLY_URL } from "../../utils";
 
 class Navigation extends Component  {
     constructor(props){
@@ -37,7 +38,7 @@ class Navigation extends Component  {
                             <NavItem eventKey={'faq'} href="#faq">
                                 FAQ 
                             </NavItem>
-                            <NavItem className="button" href="https://progressivetalentpipeline.applytojob.com/apply/BFlTRQV7hB/2023-Progressive-Talent-Pipeline-Application" target="_blank">
+                            <NavItem className="button" href={APPLY_URL} target="_blank">
                                 Apply Now
                             </NavItem>
                         </Nav>
