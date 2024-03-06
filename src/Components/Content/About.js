@@ -57,6 +57,12 @@ export default class About extends Component  {
                 </div>
               </div>
             </div>)}
+            <div className="you">
+              <a href="https://progressivetalentpipeline.applytojob.com/apply/5jd9y450Qs/Program-Associate-Progressive-Talent-Pipeline" target="_blank">+You? We're hiring >></a>
+              <div className="line">
+                <div>Program Associate</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

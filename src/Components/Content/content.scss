@@ -37,6 +37,24 @@
     padding-top: 20px;
     padding-bottom: 5px;
     margin-bottom: 0;
+    &.navbar-fixed-top {
+        top: 45px;
+    }
+}
+.hiring{
+    padding: 10px 0;
+    background-color: $blue;
+    color: $white;
+    text-align: center;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1004;
+    a{
+        color: $green;
+    }
 }
 
  .navbar-default .navbar-nav>li>a {

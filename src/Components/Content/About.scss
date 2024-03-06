@@ -97,29 +97,36 @@
           display: block;
         }
         .info{
-          b{
-            display: block;
-            color: $white;
-            font-weight: 900;
-            font-size: 1.6rem;;
-            margin: 20px 0 10px;
-          }
-          .line{
-            display: flex;
-            justify-content: space-between;
-            color: $text-light;
-            font-weight: 200;
-            a{
-              display: inline-block;
-              height: 30px;
-              width: 30px;
-              background: url(../../images/twitter.svg) center center no-repeat;
-              margin-left: 15px;
-              background-size: 90%;
-              &.email{
-                background-image: url(../../images/mail.svg);
-              }
-            }
+        }
+      }
+      .you a,
+      b{
+        display: block;
+        color: $white;
+        font-weight: 900;
+        font-size: 1.6rem;;
+        margin: 20px 0 10px;
+      }
+      .you{
+        padding-top: 15px;
+        a {
+          color: $green;
+        }
+      }
+      .line{
+        display: flex;
+        justify-content: space-between;
+        color: $text-light;
+        font-weight: 200;
+        a{
+          display: inline-block;
+          height: 30px;
+          width: 30px;
+          background: url(../../images/twitter.svg) center center no-repeat;
+          margin-left: 15px;
+          background-size: 90%;
+          &.email{
+            background-image: url(../../images/mail.svg);
           }
         }
       }
