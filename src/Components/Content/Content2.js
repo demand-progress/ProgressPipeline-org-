@@ -63,9 +63,9 @@ class Content2 extends Component {
         return (
             <div className={classNames("content-2", currentKey + '-page')}>
                 <header className="main-header">
-                    <div className="hiring">
+                    {/* <div className="hiring">
                         We're hiring! Join the PTP team as a <a href="https://progressivetalentpipeline.applytojob.com/apply/5jd9y450Qs/Program-Associate-Progressive-Talent-Pipeline" target='_blank'>Program Associate >></a>
-                    </div>
+                    </div> */}
                     <Navigation navigatePage={this.navigatePage}/>
                 </header>
                 <div className="page">
