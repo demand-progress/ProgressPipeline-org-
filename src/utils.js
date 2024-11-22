@@ -6,7 +6,7 @@ export const APPLY_URL = 'https://progressivetalentpipeline.applytojob.com/apply
 export const getPage = id => {
   return axios({
       method: 'get',
-      url: 'https://api.demandprogressaction.org/wp-json/wp/v2/pages/' + id,
+      url: 'https://api.demandprogress.org/wp-json/wp/v2/pages/' + id,
       headers: {
         'Content-Type': 'application/json',
       }
