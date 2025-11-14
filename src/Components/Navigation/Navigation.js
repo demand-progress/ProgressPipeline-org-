@@ -38,6 +38,9 @@ class Navigation extends Component  {
                             <NavItem eventKey={'faq'} href="#faq">
                                 FAQ 
                             </NavItem>
+                            <NavItem eventKey={'nyc'} href="#nyc">
+                                NYC
+                            </NavItem>
                             <NavItem className="button" href={APPLY_URL} target="_blank">
                                 Apply Now
                             </NavItem>

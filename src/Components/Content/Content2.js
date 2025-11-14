@@ -14,6 +14,7 @@ import Why from './Why'
 import Footer from "./Footer.js";
 import axios from 'axios';
 import Faq from "./FAQ.js";
+import NYC from "./NYC.js";
 
 class Content2 extends Component {
     constructor(props){
@@ -49,6 +50,10 @@ class Content2 extends Component {
                 break;
             case 'why':
                 display = <Why/>
+                banner = <span>Do you want to make sure the voice of your community is heard?</span>
+                break;
+            case 'nyc':
+                display = <NYC/>
                 banner = <span>Do you want to make sure the voice of your community is heard?</span>
                 break;
             case 'jobs':
