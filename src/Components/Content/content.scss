@@ -2,7 +2,7 @@
 
 .content-2{
     .page{
-        padding-top: 80px;
+        padding-top: 95px;
     }
     .content{
         a{
@@ -223,6 +223,22 @@ ol li {
     margin-bottom: 80px;
 }
 
+.privacy-link-container {
+  text-align: right;
+  padding: 20px 100px 40px;
+  background-color: $white;
+
+  .privacy-link {
+    font-size: 0.9rem;
+    color: $text-med;
+    text-decoration: underline;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
 
 /* ----------- Non-Retina Screens ----------- */
 @media screen 
@@ -272,7 +288,15 @@ ol li {
             .page-content {
                 margin-bottom: 120px;
             }
-            
+
+            .privacy-link-container {
+                padding: 15px 30px 30px;
+
+                .privacy-link {
+                    font-size: 0.85rem;
+                }
+            }
+
             .footer p {
                 font-size: 10px;
             }

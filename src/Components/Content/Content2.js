@@ -15,6 +15,7 @@ import Footer from "./Footer.js";
 import axios from 'axios';
 import Faq from "./FAQ.js";
 import NYC from "./NYC.js";
+import PrivacyPolicy from './PrivacyPolicy.js';
 
 class Content2 extends Component {
     constructor(props){
@@ -60,6 +61,10 @@ class Content2 extends Component {
                 display = <Jobs/>
                 banner = <span>Excited to work in roles like these?</span>
                 break;
+            case 'privacy-policy':
+                display = <PrivacyPolicy/>
+                banner = <span>Have questions about our privacy practices?</span>
+                break;
             default:
                 banner = <span>Are you ready to contribute your ideas?</span>
                 display = <Home />
@@ -77,6 +82,9 @@ class Content2 extends Component {
                     {display}
                 </div>
                 <ApplyBanner>{banner}</ApplyBanner>
+                <div className="privacy-link-container">
+                    <a href="#privacy-policy" onClick={() => this.setState({ currentKey: 'privacy-policy' })} className="privacy-link">Privacy Policy</a>
+                </div>
             </div>
           )
     }
