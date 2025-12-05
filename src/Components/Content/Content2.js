@@ -63,7 +63,7 @@ class Content2 extends Component {
                 break;
             case 'privacy-policy':
                 display = <PrivacyPolicy/>
-                banner = <span>Have questions about our privacy practices?</span>
+                banner = <span>Do you want to help form or carry out progressive policy? </span>
                 break;
             default:
                 banner = <span>Are you ready to contribute your ideas?</span>
@@ -83,7 +83,7 @@ class Content2 extends Component {
                 </div>
                 <ApplyBanner>{banner}</ApplyBanner>
                 <div className="privacy-link-container">
-                    <a href="#privacy-policy" onClick={() => this.setState({ currentKey: 'privacy-policy' })} className="privacy-link">Privacy Policy</a>
+                    <a href="#privacy-policy" onClick={() => this.setState({ currentKey: 'privacy-policy' })} className="privacy-link">Privacy Notice</a>
                 </div>
             </div>
           )
