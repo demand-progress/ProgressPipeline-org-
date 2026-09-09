@@ -37,7 +37,7 @@ export default class Home extends Component  {
                 </div>)}
             </div>}
           </IsVisible>
-          <p className='disclaimer'>All data regarding job requirements and salaries is provided for informational purposes only; the precise requirements and salary of all positions are set by the specific employer and may vary accordingly.</p>
+          <p className='disclaimer'>All data regarding job requirements and salaries is provided for informational purposes only; the precise requirements and salary of all positions are set by the specific employer and may vary accordingly. Read more: <a href="https://www.congress.gov/crs-product/IF13073" target="_blank" rel="noopener noreferrer">House</a>, <a href="https://www.congress.gov/crs-product/IF13074" target="_blank" rel="noopener noreferrer">Senate</a>, and <a href="https://help.usajobs.gov/working-in-government/pay" target="_blank" rel="noopener noreferrer">executive branch</a>.</p>
         </div>
       </div>
       <div className="testimonials">
