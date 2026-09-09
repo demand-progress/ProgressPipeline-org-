@@ -22,7 +22,7 @@ export default class Process extends Component  {
       <div className="container">
         <div className="headline" >{page.acf.headline}</div>
         <p>{page.acf.subheadline}</p>
-        <h3 className="mt">Your Process:</h3>
+        <h3 className="mt">The PTP Process:</h3>
         <div className="your-process">
           <div className="steps">
             {flatten(page.acf.process_steps.map((t, i) => [<a key={i} onClick={() => this.setState({ currentSlide: i })} className={classNames('step', { active: i === currentSlide })}>{t.title}</a>, <span className="space" key={'space-' + i} />]))}

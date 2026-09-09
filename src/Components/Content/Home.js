@@ -37,6 +37,7 @@ export default class Home extends Component  {
                 </div>)}
             </div>}
           </IsVisible>
+          <p className='disclaimer'>All data regarding job requirements and salaries is provided for informational purposes only; the precise requirements and salary of all positions are set by the specific employer and may vary accordingly.</p>
         </div>
       </div>
       <div className="testimonials">

@@ -39,23 +39,23 @@ class Content2 extends Component {
         switch(currentKey) {
             case 'about':
                 display = <About />
-                banner = <span>Do you want to make sure the voice of your community is heard?</span>
+                banner = <span>Do you want to make sure your voice is heard?</span>
                 break;
             case 'process':
                 display = <Process />
-                banner = <span>Do you want to help form or carry out progressive policy?</span>
+                banner = <span>Are you ready to contribute your ideas?</span>
                 break;
             case 'faq':
                 display = <Faq />
-                banner = <span>Do you want to help form or carry out progressive policy?</span>
+                banner = <span>Are you ready to contribute your ideas?</span>
                 break;
             case 'why':
                 display = <Why/>
-                banner = <span>Do you want to make sure the voice of your community is heard?</span>
+                banner = <span>Do you want to make sure your voice is heard?</span>
                 break;
             case 'nyc':
                 display = <NYC/>
-                banner = <span>Do you want to make sure the voice of your community is heard?</span>
+                banner = <span>Do you want to make sure your voice is heard?</span>
                 break;
             case 'jobs':
                 display = <Jobs/>
@@ -63,7 +63,7 @@ class Content2 extends Component {
                 break;
             case 'privacy-policy':
                 display = <PrivacyPolicy/>
-                banner = <span>Do you want to help form or carry out progressive policy? </span>
+                banner = <span>Are you ready to contribute your ideas? </span>
                 break;
             default:
                 banner = <span>Are you ready to contribute your ideas?</span>
@@ -84,6 +84,7 @@ class Content2 extends Component {
                 <ApplyBanner>{banner}</ApplyBanner>
                 <div className="privacy-link-container">
                     <a href="#privacy-policy" onClick={() => this.setState({ currentKey: 'privacy-policy' })} className="privacy-link">Privacy Notice</a>
+                    <p className='dp'>Progressive Talent Pipeline is a project of Demand Progress Education Fund / Demand Progress Action</p>
                 </div>
             </div>
           )

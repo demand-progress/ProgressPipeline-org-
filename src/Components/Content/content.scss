@@ -26,6 +26,13 @@
     box-shadow: 2px 2px #888888;
 }
 
+p.dp{
+    font-size: 0.8rem;
+    color: $text-med;
+    text-align: right;
+    padding: 10px 0px 0;
+    margin-bottom: 0px;
+}
 
 
 .navbar,
@@ -225,7 +232,7 @@ ol li {
 
 .privacy-link-container {
   text-align: right;
-  padding: 20px 100px 40px;
+  padding: 20px 100px;
   background-color: $white;
 
   .privacy-link {

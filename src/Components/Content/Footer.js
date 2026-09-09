@@ -6,6 +6,7 @@ const Footer = (props) => {
     return ( 
       <div className="footer">
         <p>{footerText}<a href={footerAnchorLink} target={target}>{footerLinkText}</a></p>
+        <p>Progressive Talent Pipeline is a project of Demand Progress Education Fund / Demand Progress Action</p>
       </div>
   );
 }
